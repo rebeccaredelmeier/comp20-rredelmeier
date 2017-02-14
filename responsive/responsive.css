@@ -10,7 +10,7 @@ frame is displayed depending on browser window
 @media only screen 
   and (min-width: 0px) 
   and (max-width: 600px) { 
- 	div {
+ 	.ralphy {
   		width: 250px;
 		height: 193px;
 		background: url(ralphy.gif) -250px -367px;
@@ -20,7 +20,7 @@ frame is displayed depending on browser window
 @media only screen 
   and (min-width: 601px) 
   and (max-width: 800px) { 
-  	div {
+  	.ralphy {
   		width: 250px;
 		height: 185px;
 		background: url(ralphy.gif) 0px -375px;
@@ -30,7 +30,7 @@ frame is displayed depending on browser window
 @media only screen 
   and (min-width: 801px) 
   and (max-width: 1000px) { 
-  	div {
+  	.ralphy {
   		width: 250px;
 		height: 193px;
 		background: url(ralphy.gif) -250px -180px;
@@ -40,7 +40,7 @@ frame is displayed depending on browser window
 @media only screen 
   and (min-width: 1001px) 
   and (max-width: 1200px) { 
-  	div {
+  	.ralphy {
   		width: 250px;
 		height: 193px;
 		background: url(ralphy.gif) 0px -180px;
@@ -50,7 +50,7 @@ frame is displayed depending on browser window
 @media only screen 
   and (min-width: 1201px) 
   and (max-width: 1400px) { 
-  	div {
+  	.ralphy {
   		width: 250px;
 		height: 193px;
 		background: url(ralphy.gif) -250px 0px;
@@ -59,7 +59,7 @@ frame is displayed depending on browser window
 
 @media only screen 
   and (min-width: 1401px)  { 
-  	div {
+  	.ralphy {
   		width: 250px;
 		height: 193px;
 		background: url(ralphy.gif) 0px 0px;
