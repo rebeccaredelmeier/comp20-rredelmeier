@@ -1,0 +1,15 @@
+/*
+style.css
+by Rebecca Redelmeier
+Feb 2017
+Purpose: style sheet for annotation style.css
+*/
+
+h1 {
+	font-family: helvetica;
+	color: violet;
+}
+
+body {
+	background-color: lightblue;
+}
