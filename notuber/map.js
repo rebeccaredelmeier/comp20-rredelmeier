@@ -3,16 +3,17 @@ var myLat;
 var myLng;
 var infowindow;
 
+
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: -34.397, lng: 150.644},
         zoom: 8
     });
+    infowindow = new google.maps.InfoWindow();
     getMyLocation();
 }
 
-function loadVehicles() {
-	infowindow = new google.maps.InfoWindow();
+function loadVehiclesPassengers() {
     var http = new XMLHttpRequest();
     var url = "https://defense-in-derpth.herokuapp.com/submit";
     var params = "username=toA5vnc1&lat=10.0&lng=10.0";
@@ -24,7 +25,15 @@ function loadVehicles() {
     http.onreadystatechange = function() {//Call a function when the state changes.
         if(http.readyState == 4 && http.status == 200) {
             var JSONresponse = JSON.parse(http.responseText);
-            placeVehicles(JSONresponse);
+            if ("vehicles" in JSONresponse) {
+            	placeVehicles(JSONresponse);
+            }
+            else if ("passengers" in JSONresponse) {
+            	placePassengers(JSONresponse);
+            }
+            else {
+            	alert("Unable to load passengers/vehicles");
+            }
         }
     }
     http.send(params);
@@ -36,10 +45,10 @@ function getMyLocation() {
         navigator.geolocation.getCurrentPosition(function(position) {
             myLat = position.coords.latitude;
             myLng = position.coords.longitude;
-            loadVehicles(); //once my locatin is found, load vehicles and place
+            loadVehiclesPassengers(); //once my location is found, load vehicles/passengers depending
             map.panTo({lat:myLat, lng:myLng});
             image = {
-            	url: "passenger.png",
+            	url: "me.png",
             	scaledSize: new google.maps.Size(50, 50),
             	origin: new google.maps.Point(0,0), // origin
     			anchor: new google.maps.Point(0, 0) // anchor
@@ -79,8 +88,42 @@ function placeVehicles(JSONresponse) {
 		var distance = getDistance(me, markerPoint);
 		marker = new google.maps.Marker({
             position: {lat:JSONresponse.vehicles[i].lat, lng:JSONresponse.vehicles[i].lng},
-            title: "User: " + JSONresponse.vehicles[i].username,
-            snippet: ", Distance from user: " + distance,
+            title: "Driver username: " + JSONresponse.vehicles[i].username,
+            snippet: ", Distance from you: " + distance,
+            icon: image,
+            map: map,
+        }); 
+        marker.setMap(map);
+        // Allow each marker to have an info window 
+        // Source: https://wrightshq.com/playground/
+        // 		   placing-multiple-markers-on-a-google-map-using-api-3/   
+        google.maps.event.addListener(marker, 'click', (function(marker, i) {
+            return function() {
+                infowindow.setContent(marker.title + marker.snippet);
+                infowindow.open(map, marker);
+            }
+        })(marker, i));
+	}
+
+}
+
+function placePassengers(JSONresponse) {
+	image = {
+        url: "passenger.jpg",
+        scaledSize: new google.maps.Size(50, 50),
+        origin: new google.maps.Point(0,0), // origin
+    	anchor: new google.maps.Point(0, 0) // anchor
+    };
+
+	var marker, i;
+	for (i = 0; i < JSONresponse.vehicles.length; i++) {
+		var markerPoint = new google.maps.LatLng(JSONresponse.vehicles[i].lat, JSONresponse.vehicles[i].lng);
+		var me = new google.maps.LatLng(myLat, myLng);
+		var distance = getDistance(me, markerPoint);
+		marker = new google.maps.Marker({
+            position: {lat:JSONresponse.vehicles[i].lat, lng:JSONresponse.vehicles[i].lng},
+            title: "Passenger username: " + JSONresponse.vehicles[i].username,
+            snippet: ", Distance from you: " + distance,
             icon: image,
             map: map,
         }); 
