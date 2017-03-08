@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Simple Map</title>
+        <link rel="stylesheet" href="index-style.css" type="text/css" />
+        <meta name="viewport" content="initial-scale=1.0">
+        <meta charset="utf-8">
+        <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      document.getElementById("image").height = "300";
+      document.getElementById("image").width = "300";
+    </style>
+   </head>
+
+    <body>
+        <div id="map"></div>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBW9E9gXm_Joaktfb3u0LQASDl1pY2VkNs&callback=initMap"
+        async defer></script>
+        <script src="map.js"></script>
+        
+  </body>
+</html>
