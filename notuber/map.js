@@ -88,8 +88,8 @@ function placeVehicles(JSONresponse) {
 		var distance = getDistance(me, markerPoint);
 		marker = new google.maps.Marker({
             position: {lat:JSONresponse.vehicles[i].lat, lng:JSONresponse.vehicles[i].lng},
-            title: "Driver username: " + JSONresponse.vehicles[i].username,
-            snippet: ", Distance from you: " + distance,
+            title: "Name: " + JSONresponse.vehicles[i].username,
+            snippet: ", istance from you: " + distance + " miles",
             icon: image,
             map: map,
         }); 
@@ -108,7 +108,7 @@ function placeVehicles(JSONresponse) {
 }
 
 function placePassengers(JSONresponse) {
-	image = {
+    image = {
         url: "passenger.jpg",
         scaledSize: new google.maps.Size(50, 50),
         origin: new google.maps.Point(0,0), // origin
@@ -116,14 +116,14 @@ function placePassengers(JSONresponse) {
     };
 
 	var marker, i;
-	for (i = 0; i < JSONresponse.vehicles.length; i++) {
-		var markerPoint = new google.maps.LatLng(JSONresponse.vehicles[i].lat, JSONresponse.vehicles[i].lng);
+	for (i = 0; i < JSONresponse.passengers.length; i++) {
+		var markerPoint = new google.maps.LatLng(JSONresponse.passengers[i].lat, JSONresponse.passengers[i].lng);
 		var me = new google.maps.LatLng(myLat, myLng);
 		var distance = getDistance(me, markerPoint);
 		marker = new google.maps.Marker({
-            position: {lat:JSONresponse.vehicles[i].lat, lng:JSONresponse.vehicles[i].lng},
-            title: "Passenger username: " + JSONresponse.vehicles[i].username,
-            snippet: ", Distance from you: " + distance,
+            position: {lat:JSONresponse.passengers[i].lat, lng:JSONresponse.passengers[i].lng},
+            title: "Name: " + JSONresponse.passengers[i].username,
+            snippet: ", distance from you: " + distance + " miles",
             icon: image,
             map: map,
         }); 
@@ -153,7 +153,7 @@ var getDistance = function(p1, p2) {
 	lng2 = p2.lng();
 
   	var R = 6371; // km 
-	//has a problem with the .toRad() method below.
+	
 	var x1 = (p2.lat() - p1.lat());
 	var dLat = x1.toRad();  
 	var x2 = (p2.lng()-p1.lng());
