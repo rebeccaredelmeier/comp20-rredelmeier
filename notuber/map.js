@@ -141,6 +141,9 @@ function placePassengers(JSONresponse) {
 
 }
 
+//get distance between me and vehicle/passenger
+//source for haverstine formula: http://stackoverflow.com/
+//	questions/14560999/using-the-haversine-formula-in-javascript
 var getDistance = function(p1, p2) {
 
 	Number.prototype.toRad = function() {

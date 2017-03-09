@@ -1,4 +1,4 @@
-README.txt
+README.md
 COMP 20 Lab: Responsive Design
 By Rebecca Redelmeier
 Date: March 9, 2017
