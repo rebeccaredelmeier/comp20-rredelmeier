@@ -1,4 +1,3 @@
-var map;
 var myLat;
 var myLng;
 var infowindow;
@@ -39,7 +38,8 @@ function loadVehiclesPassengers() {
     http.send(params);
 }
 
-
+//source: https://tuftsdev.github.io/
+//        WebProgramming/examples/google_maps/geolocation_map.html
 function getMyLocation() {
     if (navigator.geolocation) { // the navigator.geolocation object is supported on your browser
         navigator.geolocation.getCurrentPosition(function(position) {
@@ -89,7 +89,7 @@ function placeVehicles(JSONresponse) {
 		marker = new google.maps.Marker({
             position: {lat:JSONresponse.vehicles[i].lat, lng:JSONresponse.vehicles[i].lng},
             title: "Name: " + JSONresponse.vehicles[i].username,
-            snippet: ", istance from you: " + distance + " miles",
+            snippet: ", distance from you: " + distance + " miles",
             icon: image,
             map: map,
         }); 

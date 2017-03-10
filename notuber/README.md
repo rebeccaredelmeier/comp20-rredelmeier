@@ -1,5 +1,5 @@
 README.md
-COMP 20 Lab: Responsive Design
+COMP 20 Lab: NotUber
 By Rebecca Redelmeier
 Date: March 9, 2017
 
@@ -9,7 +9,7 @@ retrieves and displays either the vehicles or passengers depending on what
 reponse data that the data store sends. When the user's location (a sun flower)
 is clicked on, my username will appear in an infowindow. When a passenger (baby) or
 vehicle (car) is clicked on, its username and distance away from me (in miles) 
-will be displayed in an info window
+will be displayed in an info window.
 
 COLLABORATION
 I received help from TAs in Halligan during office hours. (They're so helpful!)
