@@ -1,0 +1,15 @@
+README.md
+COMP 20 Lab: Messaging
+By Rebecca Redelmeier
+Date: March 14, 2017
+
+IMPLEMENTATION
+I have correctly implemented the Messages page so that the page fetches messages in JSON
+format from a remote location and reports them on the page to the user using
+JQuery. 
+
+COLLABORATION
+I received help from TAs in Halligan during office hours.
+
+HOURS
+This assignment took me approximately 1 hour to complete
