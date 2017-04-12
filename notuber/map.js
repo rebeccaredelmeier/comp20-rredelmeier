@@ -14,7 +14,7 @@ function initMap() {
 
 function loadVehiclesPassengers() {
     var http = new XMLHttpRequest();
-    var url = "https://defense-in-derpth.herokuapp.com/submit";
+    var url = "https://sheltered-springs-94170.herokuapp.com/submit";
     var params = "username=toA5vnc1&lat=10.0&lng=10.0";
     http.open("POST", url, true);
 
