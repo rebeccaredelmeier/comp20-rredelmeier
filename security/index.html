@@ -39,7 +39,6 @@
 	</p>
 
 
-	<p>
 	<h2> ABSTRACT OF FINDINGS </h2> 
 	<p>
 		I found that I was able to change the user's experience of using both ends of the application through sending manipulative input to the server. By sending input that would be read as "code" rather than a username, latitude, or longitude that the application was prepared for, I could change what the pages that any user accesses would look like. I was also able to create errors in the application itself by sending information that the application was not prepared to handle. These modifications were stores in the database that I was sending them to, and thus impacted each use of the application and not just the uses where I was hacking the system. 
@@ -48,7 +47,7 @@
 
 	<h2> ISSUES FOUND </h2>
 		<h4> Adding Images to the Root Index Page </h4>
-		<h5> Location: </h5>
+		<h5> Location: </h5> 
 		POST request causes issue, GET request to Root Index Page shows issue
 
 		<h5> Severity: </h5>
@@ -57,7 +56,7 @@
 		<h5> Description: </h5>
 		<p> By putting an image script in place of a username in the POST request, I could add an image to the root index page that was meant to display passengers and locations. I could manipulate the image size so that the entire page was taken up by it and thus unusable. </p>
 
-		<h5> Proof: </h5>
+		<h5> Proof: </h5> 
 		<img src="add-image.png" alt="inserted an image onto the page" >
 
 		<h5> Resolution: </h5>
@@ -74,7 +73,7 @@
 		<h5> Description: </h5>
 		<p> I was able to add CSS code to the root index page through the POST request. Below I demonstrate how I manipulated the background color of the page, but this is only a small extent of the design changes I could make with CSS input. CSS code is able to manipulate all the design of the page and thus can significantly hinder the usability of the page. </p>
 
-		<h5> Proof: </h5>
+		<h5> Proof: </h5> 
 		<img src="css.png" alt="changed css of the page">
 
 		<p> Importantly, inputting different kinds of code into the application through the POST request can also manipulate other parts of the page. For example, I can also input JavaScript code in the same manner directly through the POST request. By doing so I can add JavaScript functions and commands to the application, such as an alert box as demonstrated below. </p>
@@ -107,3 +106,8 @@
 	This application has many security risks that can have severe impacts on the usability of the application. These problems come from not checking the user's input. Because no checks are done, the user is able to feed content that manipulates the application's front end and database.
 
 	Additionaly, the application has some security risks because of its coding. For example, the list of cleared vehicle names is hard coded and thus anyone who accesses the code could manipulate the system with that knowledge. The username of the passenger/vehicle of the not uber app is also hard coded and thus poses a risk as anyone with access to the code could manipulate their user name. To store these variables more securly, they could be stored in othe files/databases that only allow CORS to particular accesors. 
+
+	<h2> REFERENCES </h2>
+	Spoke with my peers Meredith Clark and Dakota LeRoy about hacking through the POST request. 
+
+</body>
