@@ -1,0 +1,21 @@
+
+div {
+	text-align: center;
+	color: violet;
+	background: white;
+}
+
+img {
+	align-self: center;
+	border-style: solid;
+	border-color: grey;
+}
+
+body {
+	background-color: lightgreen;
+	font-family: helvetica;
+}
+
+h4 {
+	text-underline-position: below;
+}
