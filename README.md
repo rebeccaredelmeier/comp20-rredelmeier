@@ -1,0 +1,19 @@
+README.md
+Rebecca Redelmeier
+April 27, 2017
+-----------------------
+
+PURPOSE
+	This Git repository has tracked my labs and assignments throughout COMP 20 and thus holds evidence of my learning and the skills that I have developed throughout the course. During the course, this repository was a useful tool for feedback as it allowed me to push updates of my assignments to git hub to then be accessed by professors. This respository also ensured that my files were backed up to the cloud. After the course is completed, this git hub repository is useful as it has recorded evidence of what I learned in the class, including the bugs that I worked through and the modifications that I made.
+
+FAVORITE ASSIGNMENT
+	My favorite assignment during this course was making the front end application for the Not Uber Black Car Service. For this assignment I enjoyed learning how to harness powerful API's (like Google's) to create my own application. For me, this assignment demonstrated how building web applications are not made in seperate silos, but instead develop by using APIs and libraries that already exist. As well, this assignment helped me understand how coding for the web in JavaScript works, and its similarities and differences to C++ which I already has an understanding of. I was able to developing my understanding of call back functions and vars which allowed me to think more creatively about web design and development.
+
+GROWTH
+	Looking back at the course, I think that I have grown tremendously not only in my web programming skills but also in my general understanding of computer science. I now understand the basics of building web pages and web applications, as well as how to seek out answers and help for web-related problems I may come accross. Additionaly, before this course, I had only ever programmed in C++ and thus saw C++ equated with computer science. Now, I have been exposed to new languages and the multitude of options (each with pros and cons!) for completing different projects. For example, for the group project we had to think about which kinds of front end and back end frameworks we wanted to use. This developed my ability to think critically about computer programming and the kinds of languages/frameworks/tools I use in my work. 
+
+IMPORTANT LEARNING
+	The most important thing that I learned in this course was the need for collaboration in web programming (and probably all programming for  that matter). I remember that one of the first times I went to office hours, I was surprised that the TA didn't automatically know the answers. Instead, he showed me how to look up the documentation for the applications and APIs that I was using in my project. This seems obvious now, but at the time it showed me how huge of a body of knowledge that the web has and that it requires constant research and seeking out of knowledge. The importance of collaboration was also emphasized to me during the group project as we each took on a different segment of the application we were building. Web requires both front-end and back-end work which, though similar, also have very different skills attached. In my group, those who were more interested in design and user experience opted to work on the front end, while those who were more interested in back end algorithims and math worked on the back end. This division of labor within the team worked great because it meant that each person enjoyed and thrived in what they were doing. Additionaly, by working collaboatively we were able to learn from each other about the aspects of the project that we were not "assigned" to and thus developed and understanding for the parts that we felt less comfortable with.
+
+FOR THE FUTURE
+	I hope to explore the design aspect of web more in the future. I want to learn about the D3 javascript library and about how interactive visualizations can create engagement on the web.
